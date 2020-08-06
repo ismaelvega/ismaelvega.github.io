@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change color background with Javascript</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        #buttonContainer{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input{
+            font-size: 40px;
+            background-color: transparent;
+            border: 3px solid #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="buttonContainer">
+        <input type="button" value="change color" onclick="changeColor()">
+    </div>
+    <script>
+        // let button = document.querySelector('input')
+        let colors = ['green', 'blue', 'red', 'black', 'grey', 'purple' ]
+        // document.addEventListener('click', changeColor)
+
+        function changeColor(){
+            let colorNumber = Math.floor(Math.random() * (5 - 0) + 0)
+            console.log(colorNumber)
+            document.getElementById('buttonContainer').style.backgroundColor = colors[colorNumber]
+        }
+    </script>
+</body>
+</html>
