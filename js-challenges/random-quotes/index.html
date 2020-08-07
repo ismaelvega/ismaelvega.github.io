@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Display Random Quotes</title>
+</head>
+<body>
+    <main class="main-container">
+        <input id="inputButton" type="button" value="Generate quote" onclick="location.reload()">
+        <div class="text-container">
+            <div class="quote-icon"><img src="iconmonstr-quote-3.svg" alt=""></div>
+            <h1 id="quote"></h1>
+            <div class="quote-icon"><img src="iconmonstr-quote-3.svg" alt=""></div>
+        </div>
+        <p id="author">aaaaaaaaaaaaaaaaaaaaa</p>
+    </main>
+    <script>
+        (function displayQuote(){
+            let before;
+            let quote;
+            let author;
+            let quoteNumber = Math.round(Math.random() * (4 - 0) + 0)
+                if(quoteNumber === before){
+                    location.reload()
+                }
+            switch(quoteNumber){
+                case 0: {
+                    quote = "Life is too short and sweet to be spent by cribbing and complaining about things."
+                    author = "Life"
+                    break;
+                }
+                case 1: {
+                    quote = "Life is like a landscape. You live in the midst of it but can describe it only from the vantage point of distance."
+                    author = "Charles Lindbergh"
+                    break;
+                }
+                case 2: {
+                    quote = "God save me from my friends. I can protect myself from my enemies."
+                    author = "Claude Louis Hector De Villars"
+                    break;
+                }
+                case 3: {
+                    quote = "The price of anything is the amount of life you exchange for it."
+                    author = "David Thoreau"
+                    break;
+                }
+                case 4: {
+                    quote = "Humor is richly rewarding to the person who employs it. It has some value in gaining and holding attention. But it has no persuasive value at all"
+                    author = "John Kenneth Galbraith"
+                    break;
+                }
+            }
+
+            document.getElementById('quote').innerHTML = quote
+            document.getElementById('author').innerHTML = author
+        })()
+    </script>
+</body>
+</html>
