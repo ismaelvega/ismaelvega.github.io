@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass-the-Message</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            position: relative;
+            top: 0;bottom: 0;left: 0;right: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #95b8d1;
+        }
+
+        .main-container{
+            background-color: #f5f5f5;
+            padding: 40px 30px;
+            padding-right: 55px;
+            width: 50%;
+            text-align: center;
+        }
+
+        #inputText {
+            font-size: 30px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        #inputButton{
+            margin-top: 18px;
+            margin-bottom: 20px;
+            font-size: 25px;
+            background-color: #95b8d1;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #inputButton:hover{
+            color: black;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #95b8d1;
+            font-size: 29px;
+        }
+
+        @media screen and (max-width: 395px){
+            .main-container{
+                padding-right: 30px;
+                width: 60%;
+                word-wrap: break-word;
+            }
+            #inputText {
+                font-size: 14px;
+                height: 20px;
+                padding: 10px;
+                width: 90%;
+            }
+            h2{
+                font-size: 25px;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="main-container">
+        <h1>A message you would like to pass</h1>
+        <input type="text" placeholder="Enter a message(max length: 40)" id="inputText" maxlength="40">
+        <input type="button" value="Send" id="inputButton" onclick="displayMessage()">
+        <h1>Last message delivered</h1>
+        <h2 id="message"></h2>
+    </main>
+    <script>
+        const inputText = document.getElementById('inputText')
+
+        function displayMessage() {
+            document.getElementById('message').innerHTML = inputText.value
+            inputText.value = ''
+        }
+    </script>
+</body>
+</html>
