@@ -15,7 +15,7 @@
             background: url('./mainBcg.jpeg');
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 100%;
+            background-size: 110%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -58,6 +58,7 @@
             border-radius: 4px;
             margin-left: 120px;
             cursor: pointer;
+            margin-bottom: 30px;
         }
         .buttons input:hover{
             background-color: rgb(49, 124, 211);
@@ -65,7 +66,39 @@
         }
 
         #lowerCountInput{
-            margin-left: -50px;
+            margin-left: -40px;
+        }
+
+
+        @media screen and (max-width: 395px) {
+            body{
+                background-size: 350%;
+            }
+            .main-container{
+                height: 80%;
+                width: 70%;
+                padding: 0 20px;
+            }
+
+            .buttons input{
+                font-size: 15px;
+                background: #0d2c54;
+                color: white;
+                padding: 10px;
+                margin-top: 20px;
+                border: none;
+                border-radius: 4px;
+                margin-left: 20px;
+                cursor: pointer;
+                margin-bottom: 30px;
+            }
+
+            #lowerCountInput{
+                margin-left: 0px;
+            }
+            #number {
+                font-size: 120px;
+            }
         }
     </style>
 </head>
