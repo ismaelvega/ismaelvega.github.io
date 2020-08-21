@@ -82,7 +82,7 @@ body{
     }
 
     .buttons-container{
-        grid-row-gap: 10px;
+        grid-row-gap: 20px;
         grid-column-gap: 0px;
         width: 100%;
         padding: 0px 15px;
@@ -109,5 +109,9 @@ body{
         width: 15%;
         font-size: 50px;
         cursor: pointer;
+    }
+
+    #button-clear {
+        color: white;
     }
 }
